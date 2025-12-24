@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hans Page Sample</title>
+
+
+
+    <link rel="stylesheet" href="hans.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jim+Nightshade&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body class="hanspage">
+
+    <div class="marginhans">
+        <header class="hanshead">
+            <div class="hanspage-close">
+                <a href="#" class="hansback">
+                    Back
+                </a>
+            </div>
+            <nav>
+                <a href="#" class="hansnav hide-desktophans">
+                    <img src="Menu.svg" alt="hansnavigation">
+                </a>
+                <ul class="hansul">
+                    <li class="hansli">
+                        <a href="#" class="hansnav-close hide-desktophans">
+                            <img src="Close.svg" alt="hansnavclose">
+                        </a>
+                    </li>
+                    <li class="hansli"><a href="#" class="hans hansintro">Intro</a></li>
+                    <li class="hansli"><a href="#" class="hans hansabout">About</a></li>
+                    <li class="hansli"><a href="#" class="hans hansskill">Skills</a></li>
+                    <li class="hansli"><a href="#" class="hans hansgoal">Goals</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <div class="hansintropage">
+            <main class="hansmain">
+                    <header class="hansheader">
+                        Hello,
+                    </header>
+                    <h1 class="hanshead1">
+                        <div class="hansiam">I am</div> 
+                        <div class="hansname">Hans Christian D. Llana</div>
+                    </h1>
+                    <div class="hanssubhead">
+                        | Video-gamer, IT Student
+                    </div>
+                    <a href="mailto:hanschristiandeduque.llana25@bicol-u.edu.ph" class="ContactHans">
+                        Contact
+                    </a>
+            </main>
+
+            <div class="IllustrationHans">
+                    <img src="hanspfp.png" alt="ProfilePictureHans" class="hans hanspfp">
+                    <img src="hansshadow.svg" alt="ShadowHans" class="hans hansshadow">
+            </div>
+        </div>
+
+
+        <div class="hansaboutpage">
+
+            <div class="hansaboutcontent">
+                My name is Hans Christian D. Llana. 
+                I enjoy learning about and observing trains, 
+                as I find them interesting and fascinating. 
+                One of my favorite foods is the hamburger 
+                because it is tasty and satisfying. 
+                I graduated from Legasci, 
+                where I gained important experiences and knowledge 
+                that helped shape who I am today. 
+                I continue to explore my interests 
+                while appreciating the lessons 
+                I have learned along the way.
+            </div>
+
+        </div>
+
+        <div class="hansskillpage">
+
+            <div class="hansskillcontent">
+                I have strong communication skills, 
+                which I regularly use when collaborating with others 
+                in both real-life situations and team-based video games. 
+                I am adaptable and able to adjust quickly to new challenges, 
+                whether learning new strategies in games 
+                or handling changes in different environments. 
+                My problem-solving skills are strengthened 
+                through building in Minecraft, 
+                where I plan structures, manage resources, 
+                and think critically to overcome obstacles. 
+                Playing other video games also helps me 
+                improve strategic thinking, coordination, and teamwork, 
+                which further enhances my ability 
+                to communicate effectively and adapt 
+                to different situations.
+            </div>
+
+        </div>
+
+        <div class="hansgoalpage">
+
+            <div class="hansgoalcontent">
+                My goal is to graduate from college and successfully find a job 
+                where I can apply the skills and knowledge I have learned. 
+                I aim to build a stable career that will allow me 
+                to grow professionally, gain experience, and 
+                contribute positively to the workplace. 
+                Through hard work, dedication, and continuous learning, 
+                I hope to achieve my goals 
+                and create a better future for myself.
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const hansnavm = document.querySelector('.hansul');
+        const hansnavopen = document.querySelector('.hansnav');
+        const hansnavclose = document.querySelector('.hansnav-close');
+
+        hansnavopen.addEventListener('click', () => {
+            hansnavm.classList.add('hansnavOpen')
+        })
+        hansnavclose.addEventListener('click', () => {
+            hansnavm.classList.remove('hansnavOpen')
+        })
+
+        const hansintro = document.querySelector('.hansintropage');
+        const hansintroBtn = document.querySelector('.hansintro');
+        const hansabout = document.querySelector('.hansaboutpage');
+        const hansaboutBtn = document.querySelector('.hansabout');
+        const hansskill = document.querySelector('.hansskillpagAe');
+        const hansskillBtn = document.querySelector('.hansskill');
+        const hansgoal = document.querySelector('.hansgoalpage');
+        const hansgoalBtn = document.querySelector('.hansgoal');
+
+        hansintroBtn.addEventListener('click', () => {
+            hansintro.classList.remove('hansintroclose')
+            hansabout.classList.remove('hansaboutopen')
+            hansskill.classList.remove('hansskillopen')
+            hansgoal.classList.remove('hansgoalopen')
+        })
+        hansaboutBtn.addEventListener('click', () => {
+            hansintro.classList.add('hansintroclose')
+            hansabout.classList.add('hansaboutopen')
+            hansskill.classList.remove('hansskillopen')
+            hansgoal.classList.remove('hansgoalopen')
+
+        })
+        hansskillBtn.addEventListener('click', () => {
+            hansintro.classList.add('hansintroclose')
+            hansskill.classList.add('hansskillopen')
+            hansabout.classList.remove('hansaboutopen')
+            hansgoal.classList.remove('hansgoalopen')
+
+        })
+        hansgoalBtn.addEventListener('click', () => {
+            hansintro.classList.add('hansintroclose')
+            hansgoal.classList.add('hansgoalopen')
+            hansabout.classList.remove('hansaboutopen')
+            hansskill.classList.remove('hansskillopen')
+
+        })
+    </script>
+</body>
+
+</html>

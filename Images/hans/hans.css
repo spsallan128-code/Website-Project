@@ -1,0 +1,259 @@
+body {
+    background-image: url("../hans/hansbackground.svg");
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.hanspage {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    color: aliceblue;
+}
+.hide-mobile {
+    display: none;
+}
+.marginhans {
+    margin: 6em;
+    .hanspage-close {
+        font-family: "Jacquard 12", system-ui;
+        font-weight: 400;
+        font-style: normal;
+    }
+    a.hansback {
+        color: #949494;
+        text-decoration: none;
+        font-size: 60px;
+        &:hover {
+                color: darkgrey;
+            }
+    }
+    a.ContactHans {
+        text-decoration: none;
+        font-family: "Jim Nightshade", cursive;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 36px;
+        margin-top: 1em;
+        filter: drop-shadow(0 10px 18px rgba(0,0,0,0.30));
+        &:hover {
+            background: #837D76;
+            color: #3f301e;
+        }
+    }
+}
+.hanshead {
+    display: flex;
+    justify-content: space-between;
+}
+.hansul {
+    background: #180F05;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    margin: 0;
+    list-style: none;
+    width: 40%;
+    padding: 2em;
+    transform: translateX(100%);
+
+    font-family: "Jim Nightshade", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.hansnavOpen {
+    transform: translateX(0%);
+}
+.hansli {
+    margin: 2em 0;
+
+    &:nth-of-type(1) {
+        margin-bottom: 2em;
+    }
+
+    a.hans {
+        color: aliceblue;
+        text-decoration: none;
+        font-size: 28px;
+
+        &:hover {
+            color: darkgrey;
+        }
+    }
+}
+.hansmain {
+    text-align: center;
+}
+.hansheader, .hansiam {
+    font-family: "Jacquard 24", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48px;
+    width: 35%;
+}
+.hanshead1 {
+    display: flex;
+    margin: 0 auto;
+    gap: 10px;
+
+    .hansname {
+        font-family: "Jacques Francois", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 40px;
+    }
+}
+.hanssubhead {
+    font-family: "Italianno", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36px;
+}
+a.ContactHans {
+    background: #B2A69A;
+    width: 30%;
+    height: 20%;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    color: #180F05;
+    border-radius: .3em;
+}
+.IllustrationHans {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    img.hans {
+        width: 70%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .hansshadow {
+        position: absolute;
+        left: 50%;
+        top: 60%;
+    }
+}
+
+@media (min-width: 750px) {
+    .marginhans {
+        margin: 0 4em;
+    }
+    .hide-desktophans {
+        display: none;
+    }
+    .hansul {
+        position: unset;
+        background: none;
+        display: flex;
+        gap: 40px;
+        height: auto;
+        width: auto;
+        transform: translateX(0%);
+        hansli {
+            font-size: 48;
+        }
+    }
+    .hanspage-close {
+        margin: 4em;
+    }
+}
+@media (min-width: 950px) {
+    .hansheader, .hanshead1, .hanssubhead {
+        text-align: left;
+    }
+    .hanshead {
+        margin-top: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    .hansmain {
+        width: 40%;
+        margin-left: 7em;
+        margin-top: 4em;
+        margin-right: 0;
+    }
+    .IllustrationHans {
+        position: absolute;
+        z-index: -1;
+        width: 50%;
+        top: 0;
+        right: 0;
+        margin: 0;
+        margin-top: 0;
+    }
+    .hansshadow {
+        z-index: -2;
+    }
+    .hanspfp, .hansshadow {
+        margin-top: 0;
+    }
+}
+.hansaboutpage {
+    text-align: center;
+    margin: 6em;
+    margin-top: 2em;
+    .hansaboutcontent {
+    font-family: "Moon Dance", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36px;
+    }
+}
+.hansskillpage {
+    text-align: center;
+    margin: 6em;
+    margin-top: 1em;
+    .hansskillcontent {
+    font-family: "Moon Dance", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36px;
+    }
+}
+.hansgoalpage {
+    text-align: center;
+    margin: 6em;
+    margin-top: 2em;
+    .hansgoalcontent {
+    font-family: "Moon Dance", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36px;
+    }
+}
+.hansintropage {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 9em;
+    margin-left: 1.5em;
+}
+.hansaboutpage,
+.hansskillpage,
+.hansgoalpage {
+    transform: translateX(150%);
+    position: fixed; 
+}
+.hansintroclose {
+    transform: translateX(150%);
+}
+.hansaboutopen {
+    transform: translateX(0%)
+}
+.hansskillopen {
+    transform: translateX(0%)
+}
+.hansgoalopen {
+    transform: translateX(0%)
+}

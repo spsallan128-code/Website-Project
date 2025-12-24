@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hans Page Sample</title>
+
+    <link rel="stylesheet" href="zaki.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Molle:ital@1&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body class="zakipage">
+
+    <div class="marginzaki">
+        <header class="zakihead">
+            <div class="zakipage-close">
+                <a href="#" class="zakiback">
+                    BACK
+                </a>
+            </div>
+            <nav>
+                <a href="#" class="zakinav hide-desktopzaki">
+                    <img src="Menu.svg" alt="zakinavigation">
+                </a>
+                <ul class="zakiul">
+                    <li class="zakili">
+                        <a href="#" class="zakinav-close hide-desktopzaki">
+                            <img src="Close.svg" alt="zakinavclose">
+                        </a>
+                    </li>
+                    <li class="zakili"><a href="#" class="zaki zakiintro">Intro</a></li>
+                    <li class="zakili"><a href="#" class="zaki zakiabout">About</a></li>
+                    <li class="zakili"><a href="#" class="zaki zakiskill">Skills</a></li>
+                    <li class="zakili"><a href="#" class="zaki zakigoal">Goals</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <div class="zakiintropage">
+            <main class="zakimain">
+                    <header class="zakiheader">
+                        Hello,
+                    </header>
+                    <h1 class="zakihead1">
+                        <div class="zakiiam">I am</div> 
+                        <div class="zakiname">Zaki Hugo Yap</div>
+                    </h1>
+                    <div class="zakisubhead">
+                        | Dancer, Speaker, Fashionist
+                    </div>
+                    <a href="mailto:zakihugoanonuevo.yap25@bicol-u.edu.ph" class="ContactZaki">
+                        Contact
+                    </a>
+            </main>
+
+            <div class="IllustrationZaki">
+                    <img src="zakipfp.png" alt="ProfilePictureZaki" class="zaki zakipfp">
+            </div>
+        </div>
+
+
+        <div class="zakiaboutpage">
+
+            <div class="zakiaboutcontent">
+              I am a friendly and approachable person who enjoys connecting with others. 
+              I have a strong love for music, which inspires me in many aspects of my life, and 
+              I enjoy expressing myself through dancing. 
+              I am always eager to learn something new, 
+              whether it’s a skill, hobby, or knowledge 
+              that can help me grow personally and socially. 
+              I try to approach life with positivity and curiosity, 
+              embracing new experiences and challenges 
+              whenever they come my way.
+            </div>
+
+        </div>
+
+        <div class="zakiskillpage">
+
+            <div class="zakiskillcontent">
+               I have strong skills in using Microsoft applications, 
+               which allow me to create documents, presentations, and spreadsheets efficiently. 
+               I am also skilled in using Canva for designing graphics, posters, and other visual content, 
+               which lets me express creativity while producing professional-looking work. 
+               These skills help me complete tasks effectively, stay organized, 
+               and communicate ideas visually and clearly.
+            </div>
+
+        </div>
+
+        <div class="zakigoalpage">
+
+            <div class="zakigoalcontent">
+                My goal is to graduate from Bicol University 
+                and use the knowledge and skills I gain to make a positive impact in the world. 
+                I aspire to build a software that helps people in need, 
+                creating solutions that can improve their lives and make everyday tasks easier. 
+                Through dedication, continuous learning, and practical experience, 
+                I hope to turn this vision into reality 
+                while growing both personally and professionally.
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const zakinavm = document.querySelector('.zakiul');
+        const zakinavopen = document.querySelector('.zakinav');
+        const zakinavclose = document.querySelector('.zakinav-close');
+
+        zakinavopen.addEventListener('click', () => {
+            zakinavm.classList.add('zakinavOpen')
+        })
+        zakinavclose.addEventListener('click', () => {
+            zakinavm.classList.remove('zakinavOpen')
+        })
+
+        const zakiintro = document.querySelector('.zakiintropage');
+        const zakiintroBtn = document.querySelector('.zakiintro');
+        const zakiabout = document.querySelector('.zakiaboutpage');
+        const zakiaboutBtn = document.querySelector('.zakiabout');
+        const zakiskill = document.querySelector('.zakiskillpage');
+        const zakiskillBtn = document.querySelector('.zakiskill');
+        const zakigoal = document.querySelector('.zakigoalpage');
+        const zakigoalBtn = document.querySelector('.zakigoal');
+
+        zakiintroBtn.addEventListener('click', () => {
+            zakiintro.classList.remove('zakiintroclose')
+            zakiabout.classList.remove('zakiaboutopen')
+            zakiskill.classList.remove('zakiskillopen')
+            zakigoal.classList.remove('zakigoalopen')
+        })
+        zakiaboutBtn.addEventListener('click', () => {
+            zakiintro.classList.add('zakiintroclose')
+            zakiabout.classList.add('zakiaboutopen')
+            zakiskill.classList.remove('zakiskillopen')
+            zakigoal.classList.remove('zakigoalopen')
+
+        })
+        zakiskillBtn.addEventListener('click', () => {
+            zakiintro.classList.add('zakiintroclose')
+            zakiskill.classList.add('zakiskillopen')
+            zakiabout.classList.remove('zakiaboutopen')
+            zakigoal.classList.remove('zakigoalopen')
+
+        })
+        zakigoalBtn.addEventListener('click', () => {
+            zakiintro.classList.add('zakiintroclose')
+            zakigoal.classList.add('zakigoalopen')
+            zakiabout.classList.remove('zakiaboutopen')
+            zakiskill.classList.remove('zakiskillopen')
+
+        })
+    </script>
+</body>
+
+</html>
